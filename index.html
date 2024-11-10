@@ -8,12 +8,25 @@
     <title>Laina Consulting OOD</title>
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home">
         <img src="logo.png" alt="Laina Consulting OOD Logo" class="logo">
         <h1>Welcome to Laina Consulting OOD</h1>
         <p>Your trusted partner in marketing consulting based in the heart of Barcelona</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </header>
 
+    <!-- Hero Section with Images & Video -->
     <section class="hero">
         <div class="hero-images">
             <img src="photo.jpg" alt="Barcelona Cityscape">
@@ -22,12 +35,33 @@
         </div>
     </section>
 
-    <section class="about">
+    <!-- About Us Section -->
+    <section id="about" class="about">
         <h2>About Us</h2>
         <p>At Laina Consulting, we specialize in innovative marketing strategies that reflect the vibrancy and creativity of Barcelona. Our team is dedicated to helping businesses thrive.</p>
+        <button class="cta-button">Learn More</button>
     </section>
 
-    <section class="contact">
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Consulting</h3>
+            <p>We offer personalized marketing strategies to help your business grow.</p>
+        </div>
+        <div class="service-item">
+            <h3>Social Media Management</h3>
+            <p>Let us take care of your social media presence with expert management.</p>
+        </div>
+        <div class="service-item">
+            <h3>SEO Optimization</h3>
+            <p>Improve your search engine ranking and drive traffic to your website.</p>
+        </div>
+        <button class="cta-button">Get Started</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form>
             <label for="name">Name:</label>
@@ -40,6 +74,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Contact us: <a href="mailto:info@lainaconsulting.com">info@lainaconsulting.com</a></p>
     </footer>
