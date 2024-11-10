@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    background: linear-gradient(135deg, #ff6600, #ffcc00); /* Gaudí-like vibrant background */
 }
 
 a {
@@ -48,6 +49,8 @@ header {
     padding: 60px 20px;
     background-color: #ffd700;
     color: #333;
+    border-bottom: 10px solid #f0a500;
+    border-radius: 15px 15px 0 0; /* Gaudí-style rounded edges */
 }
 
 header h1 {
@@ -66,9 +69,9 @@ header p {
     background-color: #333;
     color: white;
     font-size: 1.1rem;
-    border-radius: 5px;
+    border-radius: 30px; /* Gaudí-inspired rounded button */
     margin-top: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -119,9 +122,9 @@ header p {
     padding: 10px 20px;
     font-size: 1.1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px; /* Rounded button */
     margin-top: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .about button:hover {
@@ -197,7 +200,7 @@ header p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
@@ -211,9 +214,65 @@ footer {
     background-color: #333;
     color: white;
     font-size: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Depth with shadow */
 }
 
 footer a {
     color: #ffd700;
     text-decoration: none;
+}
+
+/* Logo Styles */
+.logo {
+    max-width: 150px; /* Logo size */
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments for logo */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px;  /* Smaller logo on mobile */
+    }
+}
+
+/* Button Styles for Gaudí-style */
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Curved edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px;
+    }
+    
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero-images {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .logo {
+        max-width: 120px;
+    }
+    
+    button {
+        width: 80%;
+    }
 }
