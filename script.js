@@ -1,14 +1,27 @@
-// Smooth Scroll for Contact Button
-document.querySelector('.btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#contact').scrollIntoView({
-        behavior: 'smooth'
+// Smooth Scroll for Navigation
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// Form Submission Alert
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Thank you for your message! We will get back to you soon.");
-    event.target.reset();
+// Scroll to Top Button
+const scrollToTopButton = document.createElement('button');
+scrollToTopButton.textContent = '↑';
+scrollToTopButton.classList.add('scroll-to-top');
+document.body.appendChild(scrollToTopButton);
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
 });
